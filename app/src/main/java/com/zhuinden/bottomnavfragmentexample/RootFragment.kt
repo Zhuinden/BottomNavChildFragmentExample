@@ -51,18 +51,10 @@ class RootFragment: KeyedFragment(R.layout.root_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val binding = RootFragmentBinding.bind(view)
-
-        binding.buttonFirstTab.setOnClickListener {
-            selectFragment(0)
-        }
-
-        binding.buttonSecondTab.setOnClickListener {
-            selectFragment(1)
-        }
-
-        binding.buttonThirdTab.setOnClickListener {
-            selectFragment(2)
+        tabs.forEachIndexed { index, textView ->
+            textView.setOnClickListener {
+                selectFragment(index)
+            }
         }
 
         setupTabSelectedState(selectedIndex)
