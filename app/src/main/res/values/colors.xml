@@ -9,5 +9,5 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="tab_unselected">#909090</color>
-    <color name="tab_selected">#121212</color>
+    <color name="tab_selected">#404040</color>
 </resources>
